@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>Inicio</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand">SAN ANDRÉS</a>
+        <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="my-nav" class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{url_for('inicio')}}"> Inicio <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="{{url_for('iniciar')}}" tabindex="-1" aria-disabled="true">Destinos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="{{url_for('iniciar')}}" tabindex="-1" aria-disabled="true">Atracciones</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="{{url_for('iniciar')}}" tabindex="-1" aria-disabled="true">Activididaes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="{{url_for('iniciar')}}" tabindex="-1" aria-disabled="true">Rutas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="{{url_for('iniciar')}}" tabindex="-1" aria-disabled="true">Recomendaciones</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="{{url_for('iniciar')}}" tabindex="-1" aria-disabled="true" >Acerca de</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="{{url_for('iniciar')}}" tabindex="-1" aria-disabled="true">Iniciar sesión</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">

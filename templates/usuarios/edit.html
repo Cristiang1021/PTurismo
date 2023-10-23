@@ -1,0 +1,66 @@
+{% include 'header.html' %}
+{% for usuario in usuarios  %}
+<br>
+<form method="post" action="/update" enctype="multipart/form-data">
+
+    <div class="card">
+        <div class="card-header">
+            Editar Usuarios
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Datos del usuario:</h5>
+            <p class="card-text">
+
+                <div class="form-group">
+                    <label for="txtNombre">Nombre:</label>
+                    <input id="txtNombre" value="{{usuario[1]}}"  class="form-control" type="text" name="txtNombre">
+                </div>
+
+                <div class="form-group">
+                    <label for="txtApellido">Apellido:</label>
+                    <input id="txtApellido" value="{{usuario[2]}}"  class="form-control" type="text" name="txtApellido">
+                </div>
+
+                <div class="form-group">
+                    <label for="txtCorreo">Correo electronico:</label>
+                    <input id="txtCorreo" value="{{usuario[3]}}" class="form-control" type="text" name="txtCorreo">
+                </div>
+
+                <div class="form-group">
+                    <label for="txtContrasena">Contraseña:</label>
+                    <input id="txtContrasena" value="{{usuario[4]}}" class="form-control" type="password" name="txtContrasena">
+                </div>
+
+                <div class="form-group">
+                    <label for="txtTelefono">Teléfono:</label>
+                    <input id="txtTelefono" value="{{usuario[6]}}" class="form-control" type="text" name="txtTelefono">
+                </div>
+
+                <div class="form-group">
+                    <label for="txtFoto">Foto:</label>
+                    <br>
+                    <img class="img-thumbnail" width="200" src="{{url_for('uploads',nombreFoto=usuario[5])}}" alt="">
+                    <br> <br>
+                    <input id="txtFoto" class="form-control" type="file" name="txtFoto">
+                </div>
+
+                <center>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-success" value="Actualizar">
+                        <a href="{{url_for('index')}}" class="btn btn-primary">Regresar</a>
+                    </div>
+                </center>
+
+                <input type="hidden" value="{{usuario[0]}}" name="txtID" id="txtID" >
+                <br>
+                
+            </p>
+        </div>
+    </div>
+    
+        
+</form>
+
+{% endfor %}
+
+{% include 'footer.html' %}

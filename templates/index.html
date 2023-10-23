@@ -1,0 +1,78 @@
+{% include 'uheader.html' %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrusel con Bootstrap</title>
+    <!-- Enlace a Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Estilo personalizado para los botones de control */
+        .carousel-control-prev, .carousel-control-next {
+            filter: brightness(0) invert(1);
+            opacity: 0.5;
+        }
+        .carousel-control-prev:hover, .carousel-control-next:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <div id="miCarrusel" class="carousel slide" data-ride="carousel">
+        <!-- Indicadores -->
+        <ol class="carousel-indicators">
+            <li data-target="#miCarrusel" data-slide-to="0" class="active"></li>
+            <li data-target="#miCarrusel" data-slide-to="1"></li>
+            <li data-target="#miCarrusel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Slides del carrusel -->
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-interval="3000">
+                <img src="/uploads/slide1.jpg" alt="Imagen 1" class="d-block w-100" style="height: 600px;">
+                <div class="carousel-caption">
+                    <h3>Imagen 1</h3>
+                    <p>Descripción de la imagen 1</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-interval="3000">
+                <img src="/uploads/slide2.jpg" alt="Imagen 2" class="d-block w-100">
+                <div class="carousel-caption">
+                    <h3>Imagen 2</h3>
+                    <p>Descripción de la imagen 2</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-interval="3000">
+                <img src="/uploads/slide3.png" alt="Imagen 3" class="d-block w-100">
+                <div class="carousel-caption">
+                    <h3>Imagen 3</h3>
+                    <p>Descripción de la imagen 3</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controles del carrusel con estilo minimalista -->
+        <a class="carousel-control-prev" href="#miCarrusel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#miCarrusel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Siguiente</span>
+        </a>
+    </div>
+</div>
+
+<!-- Enlace a jQuery y Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+{% include 'ufooter.html' %}

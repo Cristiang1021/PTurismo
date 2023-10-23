@@ -1,0 +1,15 @@
+{% include 'uheader.html' %}
+<body>
+    AQUI PÁGINA DE ADMIN
+    <br>
+    <center> 
+  <div class="alert alert-success" style="height: 50px;" role="alert">
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+        {{ message }}
+        {% endfor %}
+    {% endif %}
+    {% endwith %}
+  </div>
+    </center>
